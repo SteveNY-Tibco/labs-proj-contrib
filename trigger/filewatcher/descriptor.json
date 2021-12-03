@@ -4,13 +4,7 @@
 	"version": "0.1.0",
 	"title": "FilesWatcher",
 	"description": "Files Watcher",
-	"ref": "github.com/SteveNY-Tibco/labs-proj-contrib/trigger/filewatcher",
 	"homepage": "https://github.com/SteveNY-Tibco/labs-proj-contrib/trigger/filewatcher",
-	"display": {
-		"visible": true,
-		"smallIcon": "filewatcher.png",
-		"description": "This activity read file and pass string content to downstream"
-	},
 	"output": [
 		{
 			"name": "MessageID",
@@ -26,11 +20,11 @@
 		},
 		{
 			"name": "ModifiedTime",
-			"type": "integer"
+			"type": "int"
 		},
 		{
 			"name": "CheckTime",
-			"type": "integer"
+			"type": "int"
 		}
 	],
 	"handler": {
@@ -38,30 +32,16 @@
 		{
 			"name": "Foldername",
 			"type": "string",
-			"required": true,
-			"display": {
-				"name": "Foldername",
-				"description": "Set string name for target folder"
- 			}
+			"required": true
 		},
 		{
 			"name": "Filepattern",
 			"type": "string",
-			"display": {
-				"name": "Filepattern",
-				"description": "Target file pattern"
-			},
-			"value": ".*",
 			"required": true
 		},
 		{
 			"name": "CheckInterval",
-			"type": "integer",
-			"display": {
-				"name": "CheckInterval",
-				"description": "How often to check files (sec)"
-			},
-			"value": 10,
+			"type": "int",
 			"required": true
 		}
 	]	
