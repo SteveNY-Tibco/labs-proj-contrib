@@ -1,0 +1,69 @@
+{
+	"name": "files-watcher",
+	"type": "flogo:trigger",
+	"version": "0.0.1",
+	"title": "FilesWatcher",
+	"description": "Files Watcher",
+	"ref": "github.com/SteveNY-Tibco/labs-proj-contrib/trigger/filewatcher",
+	"homepage": "https://github.com/SteveNY-Tibco/labs-proj-contrib/trigger/filewatcher",
+	"display": {
+		"visible": true,
+		"smallIcon": "filewatcher.png",
+		"description": "This activity read file and pass string content to downstream"
+	},
+	"output": [
+		{
+			"name": "MessageID",
+			"type": "string"
+		},
+		{
+			"name": "Filepath",
+			"type": "string"
+		},
+		{
+			"name": "Filename",
+			"type": "string"
+		},
+		{
+			"name": "ModifiedTime",
+			"type": "integer"
+		},
+		{
+			"name": "CheckTime",
+			"type": "integer"
+		}
+	],
+	"handler": {
+	"settings": [
+		{
+			"name": "Foldername",
+			"type": "string",
+			"required": true,
+			"display": {
+				"name": "Foldername",
+				"description": "Set string name for target folder"
+ 			}
+		},
+		{
+			"name": "Filepattern",
+			"type": "string",
+			"display": {
+				"name": "Filepattern",
+				"description": "Target file pattern"
+			},
+			"value": ".*",
+			"required": true
+		},
+		{
+			"name": "CheckInterval",
+			"type": "integer",
+			"display": {
+				"name": "CheckInterval",
+				"description": "How often to check files (sec)"
+			},
+			"value": 10,
+			"required": true
+		}
+	]	
+	}
+}
