@@ -1,7 +1,7 @@
 {
 	"name": "files-watcher",
 	"type": "flogo:trigger",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"title": "FilesWatcher",
 	"description": "Files Watcher",
 	"ref": "github.com/SteveNY-Tibco/labs-proj-contrib/trigger/filewatcher",
